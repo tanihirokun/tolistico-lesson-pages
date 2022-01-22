@@ -1,0 +1,220 @@
+.section-top__image:nth-of-type(1) {
+  object-position: 80%;
+}
+.section-top__image:nth-of-type(2) {
+  animation-delay:  6s;
+  object-position: center;
+}
+.section-top__image:nth-of-type(3) {
+  animation-delay:  12s;
+  object-position: 20%;
+}
+.section-top__image:nth-of-type(4) {
+  animation-delay:  18s;
+  object-position: 45%;
+}
+.section-top__image:nth-of-type(5) {
+  animation-delay:  24s;
+  object-position: 35%;
+}
+.section-top h3 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+}
+.section-top h2{
+  font-size: 3.6rem;
+  letter-spacing: 2px;
+  margin-bottom: 12px;
+}
+.section-top p {
+  font-size: 1.6rem;
+  font-weight: 400;
+  margin-bottom: 85px;
+}
+.section-top p + p {
+  font-size: 1.8rem;
+  line-height: 3.6rem;
+}
+.section-top__break::after {
+  content: "\A";
+  white-space: pre;
+}
+@media (min-width:1040px) {
+  .section-top h3 {
+    font-size: 3.0rem;
+    margin-bottom: 40px;
+    font-weight: 500;
+    margin-top: 10px;
+  }
+  .section-top h2{
+    font-size: 4.8rem;
+    letter-spacing: 4px;
+    margin-bottom: 22px;
+  }
+  .section-top p {
+    font-size: 2.4rem;
+    font-weight: 400;
+    margin-bottom: 115px;
+  }
+  .section-top p + p {
+    font-size: 3.2rem;
+    line-height: 6.0rem;
+    margin-bottom: 135px;
+  }
+}
+/* ここからphilosophy */
+.section-philosophy {
+  padding: 0 24px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+.section-philosophy h2 {
+  font-size: 2.4rem;
+  padding-bottom: 35px;
+  border-bottom: 1px solid #d0d0d0;
+  margin-bottom: 30px;
+}
+.section-philosophy h3 {
+  font-size: 2.4rem;
+  font-weight: 500;
+  color: #999998;
+  margin-bottom: 7px;
+}
+.section-philosophy__sub-title {
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: #999998;
+  margin-bottom: 30px;
+}
+.section-philosophy__caption {
+  font-size: 1.8rem;
+  font-weight: 300;
+  line-height: 30px;
+  margin-bottom: 35px;
+}
+.section-philosophy__break::after {
+  content: "\A";
+  white-space: pre;
+}
+.section-philosophy__sentence {
+  font-size: 1.8rem;
+  font-weight: 300;
+  text-align: left;
+  line-height: 32px;
+  padding-bottom: 35px;
+  border-bottom: 1px solid #d0d0d0;
+  margin-bottom: 30px;
+}
+.section-philosophy__sentence-vision {
+  font-size: 1.8rem;
+  font-weight: 300;
+  text-align: left;
+  line-height: 32px;
+}
+.section-philosophy__sentence-vision:last-child {
+  padding-bottom: 35px;
+  border-bottom: 1px solid #d0d0d0;
+  margin-bottom: 75px;
+}
+@media (min-width: 1040px) {
+  .section-philosophy {
+    max-width: 1200px;
+  }
+  .section-philosophy h2 {
+    font-size: 3.6rem;
+    margin-bottom: 80px;
+    border: none;
+  }
+  .section-philosophy__container {
+    display: flex;
+    max-width: 1040px;
+    height: 410px;
+    margin: 0 auto 70px;
+  }
+  .section-philosophy__problem {
+    width: 420px;
+    padding: 10px 45px 15px;
+    margin-left: 93px;
+    border-left: 1px solid #d0d0d0;
+
+  }
+  .section-philosohy__solution {
+    width: 420px;
+    padding: 10px 45px 15px;
+    margin-right: 93px;
+    border-left: 1px solid #d0d0d0;
+    border-right: 1px solid #d0d0d0;
+  }
+  .section-philosophy__sub-title {
+    margin-bottom: 20px;
+  }
+  .section-philosophy__caption {
+    margin-bottom: 30px;
+  }
+  .section-philosophy__sentence {
+    border-bottom: none;
+  }
+  .section-philosohy__vision {
+    width: 420px;
+    height: 440px;
+    margin: 0 auto 170px;
+    padding: 10px 45px 0;
+    border-left: 1px solid #d0d0d0;
+    border-right: 1px solid #d0d0d0;
+  }
+  .section-philosophy__sentence-vision:last-child {
+    border-bottom: none;
+  }
+}
+/* ここからアイデンティティー */
+.section-identity h3 {
+  font-size: 2.4rem;
+  margin-bottom: 38px;
+}
+.section-identity h2{
+  font-size: 3.6rem;
+  letter-spacing: 2px;
+  margin-bottom: 60px;
+}
+.section-identity p {
+  width: 62.4vw;
+  max-width: 525px;
+  font-size: 1.8rem;
+  font-weight: 300;
+  text-align: left;
+  margin: 0 auto;
+}
+.section-identity__first-p {
+  padding-bottom: 35px;
+}
+.section-identity p:last-child {
+  margin-bottom: 110px;
+}
+@media (min-width: 1040px) {
+  .section-identity h3 {
+    font-size: 3.0rem;
+    font-weight: 500;
+    margin-bottom: 40px;
+  }
+  .section-identity h2 {
+    font-size: 4.8rem;
+    margin-bottom: 100px;
+  }
+  .section-identity p {
+    width: 52.7vw;
+    max-width: 670px;
+    font-size: 2.4rem;
+    font-weight: 200;
+    line-height: 55px;
+    text-align: center;
+  }
+  .section-identity__first-p {
+    padding-bottom: 70px;
+  }
+  .section-identity p:last-child {
+    margin-bottom: 185px;
+  }
+
+}
+
+

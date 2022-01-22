@@ -1,0 +1,494 @@
+@charset "UTF-8";
+/* CSS Document */
+html {
+  font-size: 62.5%; /* 16px * 62.5% = 10px */
+  width: 100%;
+
+}
+body {
+  color: #333; /* RGB */
+  font-family: 'Noto Serif JP', "游明朝体", "Yu Mincho", "YuMincho", serif;
+  font-weight: 500;
+  font-size: 1.6em; /* 親要素に対して何倍か　　１０pxに対して１.６倍＝１６px*/
+  line-height: 2.4rem; /* html要素に対して何倍か　　１０pxに対して２.４倍＝２４px*/
+  text-align: center;
+}
+section h2 {
+  font-size: 2.4rem;
+}
+a:hover {
+  opacity: 0.5;
+}
+*, *:before, *:after {
+  box-sizing: border-box; /* ボーダーボックスまでの幅で計算する様に指定*/
+}
+
+/* 共通ヘッダー */
+header {
+  height: 80px;
+  width: 100%;
+  padding: 0 24px;
+  background-color: #fff;
+  position: fixed;
+  top: 0;
+  z-index: 11;
+}
+.header__humberger {
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+  user-select: none;
+  position: relative;
+  /* margin: 22px 6.4vw 20px 0; */
+  margin: 22px 24px 20px 0;
+}
+.header__humberger span {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: #939393;
+  border-radius: 20px;
+  transition: all 0.5s;
+}
+.header__humberger span:nth-child(1) {
+  top: 5px;
+}
+.header__humberger span:nth-child(2){
+  top: 15.5px;
+}
+.header__humberger span:nth-child(3){
+  bottom: 5px;
+}
+/* humberger メニュー　変化するCSS */
+#humberger::after {
+  position: absolute;
+  top: 38px;
+  left: 38px;
+  display: block;
+  content: '';
+  width: 50px;
+  height: 50px;
+  margin: -45px 0 0 -45px;
+  border-radius: 50%;
+  border: 3px solid transparent;
+  transition: all 0.7s;
+}
+ #humberger.active span:nth-child(1) {
+  left: 100px;
+  opacity: 0;
+  animation: slide-border 0.9s forwards;
+}
+@keyframes slide-border {
+  50% {
+    transform: rotate(90deg);
+  }
+  100% {
+    height: 0;
+  }/* このkeyframsの動きは一番上がスライドして９０度斜めに吹っ飛ぶ */
+}
+
+ #humberger.active span:nth-child(2) {
+  transform: translateY(2px) rotate(-45deg);
+  transition: all 0.5s;
+} 
+#humberger.active span:nth-child(3) {
+  transform: translateY(-10px) rotate(45deg);
+  transition: 0.5s;
+}
+#humberger.active::after {
+  animation: active-btn .7s .25s forwards;
+}
+    
+@keyframes active-btn {
+  0% {
+    border-color: transparent;
+    transform: rotate(0);
+  }
+  25% {
+    border-color: transparent #939393 transparent transparent;
+  }
+  50% {
+    border-color: transparent #939393 #939393 transparent;
+  }
+  75% {
+    border-color: transparent #939393#939393 #939393;
+  }
+  100% {
+    border-color: #939393;
+    transform: rotate(-680deg);
+  }
+  /* 回転の動きつけている　始めは線なし　線あり　線なし　線なし */
+  /* 二番目は線なし　線あり　線あり　線なし */
+  /* この順で増やして最後は線のみ */
+} 
+/* ここでハンバーガーメニューの動き終わり */
+
+.header-container {
+  display: flex;
+}
+header nav ul {
+  display: none;
+}
+header h1 {
+  font-size: 3.0rem;
+  font-weight: 500;
+  margin-top: 25px;
+}
+.header-logo {
+  color: #333;
+  text-decoration: none;
+}
+.header__insta-icon {
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+  margin: 20px 0 20px auto;
+}
+.header__insta-icon img {
+  width: 100%;
+}
+/* ハンバーガーメニュー*/
+.humberger-menu__orverray {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #fff;
+  height: 100vh;
+  padding-top: 45px;
+  border-bottom: 1px solid #d2d2d2;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.6s;
+  z-index: 10;
+  display: flex;
+}
+.humberger-menu__orverray.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+.humberger-menu nav {
+  display: flex;
+  align-items: center;
+}
+.humberger-menu ul {
+  width: 100vw;
+}
+.humberger-menu ul li {
+  text-align: left;
+  padding-left: 90px;
+  width: 280px;
+  margin: 0 auto 30px;
+}
+.humberger-menu ul li:last-child {
+  border: 1px solid #333;
+  width: 280px;
+  height: 60px;
+  margin: 0 auto;
+  line-height: 55px;
+  text-align: center;
+  padding: 0;
+}
+.humberger-menu li a {
+  font-size: 2.4rem;
+  text-decoration: none;
+  color: #333;
+  font-weight: 400;
+}
+@media (min-width: 1040px) {
+  header {
+    height: 130px;
+    width: 100%;
+    padding: 0;
+  }
+  .header-container {
+    max-width: 1040px;
+    margin: 0 auto;
+  }
+  .header__humberger {
+    display: none;
+  }
+  header nav ul {
+    display: flex;
+  }
+  .header-pc__menu li a {
+    color: #333;
+    text-decoration: none;
+    font-size: 2.4rem;
+    font-weight: 300;
+    padding-right: 20px;
+    line-height: 130px;
+  }
+  header h1 {
+    font-size: 3.6rem;
+    font-weight: 600;
+    margin: 50px 100px 0 0;
+  }
+  .header__insta-icon {
+    width: 40px;
+    height: 40px;
+    margin: 43px 0 0 0;
+  }
+} 
+/* section-topのイメージ部分のみ*/
+.section-top {
+  padding-top: 80px;
+}
+.section-top__image-box {
+  width: 100%;
+  min-height: 450px;
+  /* max-height: 630px; */
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 60px;
+}
+.section-top__image {
+  width: 100%;
+  min-height: 450px;
+  object-fit: cover;
+  opacity: 0;
+  z-index: 9;
+  position: absolute;
+  top: 0;
+  left: 0;
+  animation: slider 30s infinite 0s;
+}
+@keyframes slider {
+  0% {
+    opacity: 0;
+    transform: scale(1.02);
+  }
+  10% {
+    opacity: 1;
+  }
+  20% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  30% {
+    opacity: 0;
+    z-index: 8;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@media (min-width: 1040px) {
+  .section-top {
+    padding-top: 130px;
+  }
+  .section-top__image-box {
+    width: 100%;
+    height: 630px;
+    margin-bottom: 140px;
+  }
+  .section-top__image {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+/* access */
+.section-access {
+  margin: 0 auto 30px;
+  max-width: 550px;
+}
+.section-access__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 24px;
+  margin: 0 auto;
+}
+.section-access h2 {
+  font-size: 3.0rem;
+  font-family: "游明朝体", "Yu Mincho", "YuMincho", serif;
+  /* font-size: 8vw; */
+ margin-bottom: 20px;
+}
+.section-access address {
+  margin-bottom: 10px;
+  font-style: normal;
+  /* font-size: 4vw; */
+}
+.section-access__image-box {
+  width: 100%;
+  height: 350px;
+  margin-bottom: 10px;
+}
+.section-access__image-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+  object-position: center;
+}
+
+.section-access__container-day {
+  flex-direction: column;
+}
+.section-access h3 {
+  font-weight: 400;
+}
+.section-access p {
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 18px;
+}
+.section-access__break::after {
+  content: "\A";
+  white-space: pre;
+}
+.section-access button {
+  border: none;
+  height: 45px;
+  width: 170px;
+  background: #333;
+  padding: 0;
+  margin-top: 25px;
+  color: #fff;
+  font-size: 1.8rem;
+  letter-spacing: -1px;
+  font-family: 'Noto Serif JP', "游明朝体", "Yu Mincho", "YuMincho", serif;
+  cursor: pointer;
+}
+.section-access__image-box.pc {
+  display: none;
+}
+@media (min-width: 1040px) {
+  .section-access {
+    margin-bottom: 135px;
+  }
+  .section-access__container {
+    flex-direction: column;
+   
+  }
+  .section-access__column {
+    flex-direction: column;
+    width: 340px;
+    text-align: center;
+    padding: 32px 17px 40px;
+  }
+  .section-access__image-box.pc {
+    display: block;
+    width: 700px;
+    height: 500px;
+  }
+  .section-access__image-box.sp {
+    display: none;
+  }
+  .section-access {
+    display: flex;
+    max-width: 1040px;
+  }
+  .section-access__container {
+    padding: 0;
+  }
+  .section-access h2 {
+    font-size: 3.6rem;
+    font-weight: 400;
+    margin-bottom: 40px;
+  }
+  .section-access address {
+    text-align: left;
+    font-size: 2.4rem;
+    font-weight: 200;
+    line-height: 30px;
+    margin-bottom: 40px;
+  }
+  .section-access h3 {
+    font-size: 2.4rem;
+    font-weight: 200;
+    border-bottom: 1px solid #cacaca;
+    padding-bottom: 10px;
+    width: 306px;
+    margin-bottom: 10px;
+  }
+  .section-access p  {
+    font-size: 1.8rem;
+    line-height: 36px;
+    font-weight: 200;
+  }
+  .section-access p + p {
+    border-bottom: 1px solid #cacaca;
+    padding-bottom: 10px;
+  }
+  .section-access__break::after {
+    content: "";
+    font-weight: 200;
+  }
+  .section-access button {
+    height: 60px;
+    width: 245px;
+    margin-top: 30px;
+    font-size: 2.4rem;
+    letter-spacing: 0;
+  } 
+}
+/* footer */
+footer {
+  height: 530px;
+  padding: 35px 24px 25px 36px;
+  border-top: 1px solid #cacaca;
+  position: relative;
+}
+.footer-image-box {
+  width: 35px;
+  height: 35px;
+  margin: 0 auto 30px 0;
+}
+footer img {
+  width: 100%;
+}
+footer ul li {
+  margin-bottom: 20px;
+  text-align: left;
+}
+footer li a {
+  font-size: 2.0rem;
+  text-decoration: none;
+  color: #333;
+  font-weight: 400;
+}
+footer small {
+  position: absolute;
+  bottom: 25px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+}
+@media (min-width: 1040px) {
+  footer {
+    height: 100px;
+    padding: 30px 24px 25px 36px;
+  }
+  .section-footer__container {
+    display: flex;
+    max-width: 1040px;
+    margin: 0 auto;
+    padding: 0;
+  }
+  .footer-image-box {
+    margin: 0;
+  }
+
+  footer ul {
+    display: flex;
+    padding-top: 7px;
+  }
+  footer ul li {
+    margin-left: 28px;
+    margin-bottom: 0;
+  }
+  footer li a {
+    font-weight: 200;
+  }
+
+  footer small {
+    position: static;
+    margin: 0 0 0 auto;
+    padding-top: 7px;
+    font-weight: 200;
+  }
+}

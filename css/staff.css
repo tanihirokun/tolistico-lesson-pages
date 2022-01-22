@@ -1,0 +1,126 @@
+.section-top__image:nth-of-type(1) {
+  object-position: center;
+}
+.section-top__image:nth-of-type(2) {
+  animation-delay:  6s;
+  object-position: 20%;
+}
+.section-top__image:nth-of-type(3) {
+  animation-delay:  12s;
+  object-position: 45%;
+}
+.section-top__image:nth-of-type(4) {
+  animation-delay:  18s;
+  object-position: 35%;
+}
+.section-top__image:nth-of-type(5) {
+  animation-delay:  24s;
+  object-position: 80%;
+}
+
+
+.section-staff {
+  padding: 0 24px 20px;
+  /* bottom ボタンのマージン８０px ＋２０pxで１００px */
+}
+.section-staff h2 {
+  font-size: 3.0rem;
+  margin-bottom: 40px;
+}
+.section-staff ul {
+  list-style: none;
+}
+.section-staff li {
+  width: 74.6vw;
+  max-width: 400px;
+  margin: 0 auto;
+}
+.section-staff img {
+  width: 100%;
+  height: 80vw;
+  max-height: 420px;
+  margin: 0 0 25px;
+  object-fit: cover;
+}
+.section-staff h3 {
+  font-size: 2.4rem;
+  font-weight: 300;
+  margin-bottom: 5px;
+}
+.section-staff__name {
+  font-size: 1.8rem;
+  font-weight: 300;
+  margin-bottom: 25px;
+}
+.section-staff__text {
+  font-size: 2.0rem;
+  font-weight: 300;
+  line-height: 26px;
+  text-align: left;
+  margin: 0 0 30px;
+}
+.section-staff button {
+  width: 250px;
+  height: 60px;
+  border: 1px solid #333;
+  background-color: #fff;
+  font-size: 2.0rem;
+  font-weight: 200;
+  color: #333;
+  font-family: 'Noto Serif JP', "游明朝体", "Yu Mincho", "YuMincho", serif;
+  margin-bottom: 80px;
+}
+@media (min-width: 1040px) {
+  .section-staff h2 {
+    font-size: 4.8rem;
+    margin: 10px 0 95px;
+  }
+  .section-staff li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1040px;
+    margin-bottom: 140px;
+  }
+  .section-staff__li-container {
+    flex-direction: column;
+    width: 300px;
+  }
+  .section-staff__li-container.right {
+    margin-right: 50px;
+  }
+  .section-staff__li-container.left {
+    margin-left: 50px;
+  }
+  .section-staff li:nth-child(even) {
+    flex-direction: row-reverse;
+  }
+  .section-staff .section-staff__rigth {
+    width: 420px;
+    height: 455px;
+  }
+   .section-staff .section-staff__left {
+    width: 420px;
+    height: 455px;
+  }
+  .section-staff h3 {
+    font-size: 3.0rem;
+  }
+  .section-staff__name {
+    font-size: 2.0rem;
+    margin-bottom: 40px;
+  }
+  .section-staff__text {
+    font-size: 3.0rem;
+    font-weight: 200;
+    line-height: 40px;
+    margin: 0 0 45px;
+  }
+  .section-staff button {
+    width: 280px;
+    height: 60px;
+    margin: 0;
+  }
+
+  
+}

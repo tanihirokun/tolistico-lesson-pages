@@ -1,0 +1,234 @@
+.section-top__image:nth-of-type(1) {
+  object-position: 35%;
+}
+.section-top__image:nth-of-type(2) {
+  animation-delay:  6s;
+  object-position: 80%;
+}
+.section-top__image:nth-of-type(3) {
+  animation-delay:  12s;
+  object-position: center;
+}
+.section-top__image:nth-of-type(4) {
+  animation-delay:  18s;
+  object-position: 20%;
+}
+.section-top__image:nth-of-type(5) {
+  animation-delay:  24s;
+  object-position: 45%;
+}
+
+.section-top img {
+  object-position: 40%;
+}
+.section-menu {
+  padding: 0 24px 25px;
+  max-width: 850px;
+  margin: 0 auto;
+}
+.section-menu h2 {
+  font-size: 3.0rem;
+  font-weight: 400;
+  margin-bottom: 50px;
+}
+.section-menu h3 {
+  font-size: 1.8rem;
+  font-weight: 400;
+  text-align: left;
+  padding: 0 0 5px 20px;
+  border-bottom: 1px solid #d0d0d0;
+  margin-bottom: 20px;
+}
+.section-menu__price {
+  padding: 0 20px;
+  text-align: left;
+}
+.section-menu__price-wrap {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin: 0 auto;
+}
+.section-menu__break::after {
+  content: "\A";
+  white-space: pre;
+}
+.section-menu__center {
+  text-align: center;
+}
+.section-menu span {
+  font-size: 1.8rem;
+  font-weight: 300;
+  margin-bottom: 25px;
+}
+.position {
+  position: relative;
+}
+.section-menu span.small {
+  position: absolute;
+  top: 25px;
+  left: 0;
+  font-size: 1.4rem;
+}
+.section-menu__notes {
+  text-align: left;
+  font-size: 1.6rem;
+  padding: 35px 20px 30px 20px;
+  color: #b3b3b3;
+}
+.section-menu__up-container {
+  margin-bottom: 30px;
+}
+.section-menu__first-p {
+  margin-bottom: 10px;
+}
+.section-menu__first-p.growth {
+  margin-top: 25px;
+}
+.section-menu__notes.treatment {
+  padding-top: 15px;
+}
+.section-menu__treatment p {
+  margin-bottom: 18px;
+  font-weight: 400;
+}
+.section-menu__treatment-title {
+  text-align: center;
+}
+.section-menu__treatment-container {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  justify-items: start;
+}
+.section-menu__treatment li {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+} 
+.section-menu__treatment p:last-child {
+  line-height: 26px;
+  margin-top: 15px;
+}
+.section-menu__treatment li span {
+  margin-bottom: 15px;
+} 
+@media (min-width: 1040px) {
+  .section-menu {
+    max-width: 825px;
+    padding-bottom: 75px;
+  }
+  .section-menu__grid-container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 55px;
+  }
+  .section-menu__treatment {
+    width: 345px;
+  }
+  .section-menu h2 {
+    font-size: 4.8rem;
+    font-weight: 400;
+    margin-bottom: 90px;
+    margin-top: 10px;
+  }
+  .section-menu__notes {
+    padding-bottom: 0;
+  }
+}
+/* headspa */
+.section-headspa {
+  max-width: 550px;
+  margin: 0 auto;
+}
+.section-headspa__break::after {
+  content: "\A";
+  white-space: pre;
+}
+.section-headspa__sub-title {
+  font-size: 1.8rem;
+  font-weight: 400;
+  color: #d2d2d2;
+  margin-bottom: 15px;
+}
+.section-headspa h2 {
+  font-size: 3.0rem;
+  font-weight: 400;
+  margin-bottom: 40px;
+}
+.section-headspa__container {
+  display: flex;
+  justify-content: center;
+  overflow: hidden; 
+} 
+.section-headspa__contents-wrapper {
+  width: 280px;
+  min-width: 280px;
+  margin: 0 13px;
+  transition: transform 0.6s;
+}
+.section-headspa__contents-wrapper img {
+  width: 100%;
+  min-width: 100%;
+  height: 300px;
+  object-fit: cover;
+  object-position: 75%;
+  margin-bottom: 30px;
+}
+.section-headspa__contents-wrapper h3 {
+  font-size: 2.4rem;
+  font-weight: 400;
+  margin-bottom: 30px;
+}
+.section-headspa__contents-wrapper p {
+  font-size: 2.0rem;
+  font-weight: 300;
+  margin-bottom: 35px;
+  text-align: left;
+  line-height: 34px;
+}
+.section-headspa button {
+  width: 280px;
+  height: 60px;
+  background-color: #fff;
+  border-radius: 0px;
+  border: 1px solid #333;
+  font-size: 1.8rem;
+  font-weight: 300;
+  margin-bottom: 80px;
+  color: #333;
+  cursor: pointer;
+}
+@media (min-width: 1040px) {
+  .section-headspa {
+    max-width: 1040px;
+    margin: 0 auto;
+  }
+  .section-headspa__sub-title {
+    font-size: 2.4rem;
+    margin-bottom: 20px;
+  }
+  .section-headspa__break::after {
+    content: "";
+  }
+  .section-headspa h2 {
+    font-size: 3.6rem;
+    margin-bottom: 55px;
+  }
+  .section-headspa__contents-wrapper {
+    width: 375px;
+    min-width: 375px;
+    margin: 0 52px;
+  }
+  .section-headspa__contents-wrapper img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+  }
+  .section-headspa__contents-wrapper h3 {
+    font-size: 2.6rem;
+  }
+  .section-headspa__contents-wrapper p {
+    font-size: 2.4rem;
+    font-weight: 300;
+    line-height: 38px;
+  } 
+}
+
